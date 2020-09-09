@@ -5,9 +5,7 @@ export default {
         }
     },
     computed: {
-        capitalize(string) {
-           return string.charAt(0).toUpperCase() + string.slice(1);
-        },
+        
     },
     methods: {
         
@@ -24,3 +22,11 @@ export default {
         }
     },
 }
+
+ // async created() {
+        //     const res = await this.callAPI('post', '/addTag', {tagName: 'test'});
+        //     console.log(res);
+        //     if(status == 200){
+        //         console.log(res);
+        //     }
+        // },

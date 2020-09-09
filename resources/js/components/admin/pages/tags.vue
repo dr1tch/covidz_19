@@ -1,6 +1,6 @@
 <template>
 <div>
-     <div class="card">
+     <div class="card bg-card">
         <div class="card-header flex justify-content-between align-items-center">
             <h1 v-text="routeName"></h1>
             <button
@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(tag) in showRepos" :key="tag.id" >
+                    <tr v-for="(tag) in showTags" :key="tag.id" >
                         <td v-text="tag.id"></td>
                         <td v-text="tag.name"></td>
                         <td>{{ moment(tag.created_at).format("DD-MM-YYYY") }}</td>
@@ -237,7 +237,7 @@
             console.log(this.$route.name);
             this.callAPI('get', '/getTags')
                             .then(responce => this.tags = responce);
-            console.log(this.tags);
+            // console.log(this.tags);
         },
         computed: {
             routeName (){
@@ -252,7 +252,7 @@
             rows() {
                 return this.tags.length
             },
-            showRepos () {
+            showTags () {
                 let start = (this.page - 1) * this.perPage
                 let end = start + this.perPage
                 this.loading = false

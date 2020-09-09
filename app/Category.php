@@ -7,6 +7,7 @@ use App\Idea;
 
 class Category extends Model
 {
+    protected $fillable = [ 'name' ];
     public function ideas()
     {
     	return $this->belongsToMany(Idea::class);

@@ -16,47 +16,47 @@ const routes = [
     {
         path: '/',
         component: welcome,
-        name: 'welcome'
+        name: 'Welcome'
     },
     {
         path: '/users',
         component: users,
-        name: 'users'
+        name: 'Users'
     },
     {
         path: '/ideas',
         component: users,
-        name: 'ideas'
+        name: 'Ideas'
     },
     {
         path: '/reports',
         component: users,
-        name: 'reports'
+        name: 'Reports'
     },
     {
         path: '/news',
         component: users,
-        name: 'news'
+        name: 'News'
     },
     {
         path: '/statistics',
         component: users,
-        name: 'statistics'
+        name: 'Statistics'
     },
     {
         path: '/tags',
         component: tags,
-        name: 'tags'
+        name: 'Tags'
     },
     {
         path: '/categories',
         component: categories,
-        name: 'categories'
+        name: 'Categories'
     },
     {
         path: '/messages',
         component: categories,
-        name: 'messages'
+        name: 'Messages'
     },
 ];
 

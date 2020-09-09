@@ -382,6 +382,15 @@ ul li.menu-item:hover {
     color: rgb(254, 80, 96);
 }
 
+.bg-card {
+    background: rgba(0, 0, 0, 0.24) !important;
+}
+
+.bg-modal {
+    background: #0f171e !important;
+    /* background: rgba(15, 23, 30, .9) !important; */
+}
+
 /* .vm--modal {
     background-color: #666 !important;
     z-index: 9999;

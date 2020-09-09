@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\Tag;
 
@@ -16,7 +17,7 @@ class AdminController extends Controller
     public function createTag(Request $request)
     {
         $attributes = request()->validate([
-            'tagName' => 'required|max:25',
+            'Name' => 'required|max:25',
         ]);
         $tag = Tag::create([
             'name' => $attributes['tagName'],
@@ -48,6 +49,50 @@ class AdminController extends Controller
     public function deleteAllTags()
     {
         Tag::where('id', '>', 0)->delete();
+        return "done";
+    }
+
+    /**
+     * Handle Categories Part
+     * 
+     *  [create, edit, delete, deleteAll]
+     */
+
+    public function createCategory(Request $request)
+    {
+        $attributes = request()->validate([
+            'catName' => 'required|max:25',
+        ]);
+        $cat = Category::create([
+            'name' => $attributes['catName'],
+        ]);
+        return "it's working";
+    }
+
+
+    public function getCategories()
+    {
+        return Category::latest()->get();
+    }
+
+    public function editCategory(Category $category)
+    {
+        $attributes = request()->validate([
+            'catName' => 'required|max:25',
+        ]);
+        $category->update(['name' => $attributes["catName"]]);
+        return $category;
+    }
+
+
+    public function deleteCategory(Category $category)
+    {
+        $category->delete();
+        return "done";
+    }
+    public function deleteAllCategories()
+    {
+        Category::where('id', '>', 0)->delete();
         return "done";
     }
 }

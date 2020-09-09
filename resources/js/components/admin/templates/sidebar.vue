@@ -15,7 +15,7 @@
         <div>
             <ul>
                 <router-link to="/">
-                    <li :class="[currentPage('welcome') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Dashboard" :class="[currentPage('Welcome') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-house-door-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
@@ -26,7 +26,7 @@
                     </li>
                 </router-link>
                 <router-link to="/users">
-                    <li :class="[currentPage('users') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Users" :class="[currentPage('Users') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/lamp.svg" alt=""> -->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
                     </li>
                 </router-link>
                 <router-link to="/ideas">
-                    <li :class="[currentPage('ideas') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Ideas" :class="[currentPage('Ideas') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
 
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-gem" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -48,7 +48,7 @@
                     </li>
                 </router-link>
                 <router-link to="/reports" class="">
-                    <li :class="[currentPage('reports') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Reports" :class="[currentPage('Reports') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
 
                             <svg width="1.5625em" height="1.5em" viewBox="0 0 17 16" class="bi bi-exclamation-triangle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,7 @@
                     </li>
                 </router-link>
                  <router-link to="/news" class="">
-                    <li :class="[currentPage('news') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="News" :class="[currentPage('News') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/newsfeed.svg" alt="">-->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-layout-text-window-reverse" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -72,7 +72,7 @@
                     </li>
                 </router-link>
                 <router-link to="/statistics" class="">
-                    <li :class="[currentPage('statistics') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Statistics" :class="[currentPage('Statistics') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/graph.svg" alt=""> -->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +84,7 @@
                 </router-link>
 
                 <router-link to="/tags">
-                    <li :class="[currentPage('tags') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Tags" :class="[currentPage('Tags') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/hashtag-half.svg" alt=""> -->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-tag" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +96,7 @@
                     </li>
                 </router-link>
                 <router-link to="/categories">
-                    <li :class="[currentPage('categories') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Categories" :class="[currentPage('Categories') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/bell.svg" alt=""> -->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-kanban-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@
                     </li>
                 </router-link>
                 <router-link to="/messages" class="hide-menu">
-                    <li :class="[currentPage('messages') ? activeClass : '', 'menu-item']">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Messages" :class="[currentPage('Messages') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
                             <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/send.svg" alt=""> -->
                             <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
