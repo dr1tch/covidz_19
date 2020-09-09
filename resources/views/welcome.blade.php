@@ -11,13 +11,15 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+
     </head>
     <body>
-        <div id="app">
+        <div id="app" class="container-fluid" style="height: 100%">
 
-            <example-component></example-component>
+            <admin-dash></admin-dash>
         </div>
         
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>

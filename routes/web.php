@@ -12,7 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/addTag', 'AdminController@createTag');
+Route::get('/getTags', 'AdminController@getTags');
+Route::post('/editTag/{tag:id}', 'AdminController@editTag');
+Route::post('/deleteTag/{tag:id}', 'AdminController@deleteTag');
+Route::post('/deleteAllTags', 'AdminController@deleteAllTags');
 
-Route::get('/', function () {
+Route::get('/{any}', function () {
     return view('welcome');
-});
+})->where('any', '.*');
+
