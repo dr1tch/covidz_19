@@ -3,17 +3,28 @@
     <div class="fixed-left">
 
         <!-- Logo Part -->
-        <a class="logo hide-menu" href="">
-            <div class="logo-container logo-container-sidebar">
-                <img class="logo-img-sidebar" src="/images/logo.svg" alt="">
-                <h4 class="ml-2 header-logo-side" style="font-weight: bold;">COVIDZ-19</h4>
+        <div class="flex justify-content-between align-items-center top-logo">
+            <div>
+                <a class="logo hide-menu" href="">
+                    <div class="logo-container logo-container-sidebar">
+                        <img class="logo-img-sidebar" src="/images/logo.svg" alt="">
+                        <h4 class="ml-2 header-logo-side" style="font-weight: bold;">COVIDZ-19</h4>
+                    </div>
+                </a>
             </div>
-        </a>
-
+            <div>
+                 <button @click="hamb_click" class="btn btn-sm btn-outline-success arrow-menu font-weight-bold">
+                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-left font-weight-bold" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                        </svg>
+                    </button>
+            </div>
+            
+        </div>
         <!-- SideBar-Menu  -->
 
         <div>
-            <ul>
+            <ul class="block-menu">
                 <router-link to="/">
                     <li data-toggle="tooltip" data-placement="bottom" title="Dashboard" :class="[currentPage('Welcome') ? activeClass : '', 'menu-item']">
                         <div class="menu-item-container">
@@ -68,6 +79,17 @@
                                 <path fill-rule="evenodd" d="M5 15V4H4v11h1zM.5 4h15V3H.5v1zM13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z" />
                             </svg>
                             <h5 class="header-logo-text-sidebar ml-3" style="font-weight: bold;">News</h5>
+                        </div>
+                    </li>
+                </router-link>
+                <router-link to="/galery" class="">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Galery" :class="[currentPage('Galery') ? activeClass : '', 'menu-item']">
+                        <div class="menu-item-container">
+                            <!-- <img class="logo-img-menu"  src="/images/side-menu-icons/newsfeed.svg" alt="">-->
+                            <svg width="1.5625em" height="1.5em" viewBox="0 0 17 16" class="bi bi-image-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V13a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1v-1zm5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            </svg>
+                            <h5 class="header-logo-text-sidebar ml-3" style="font-weight: bold;">Galery</h5>
                         </div>
                     </li>
                 </router-link>
@@ -197,7 +219,19 @@
 </div>
 </template>
 
-<style>
+<style scoped>
+    .block-menu, .logo-container-sidebar {
+        padding-inline-start: 5px;
+    }
+    .logo-container-sidebar {
+        margin:auto;
+        width: max-content;
+    }
+    .top-logo {
+        padding: 10px;
+        margin-bottom: 10%;
+    }
+</style>>
 
 </style>
 

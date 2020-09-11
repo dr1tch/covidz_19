@@ -1,6 +1,6 @@
 <template>  
     <div>   
-        <greeting></greeting>
+       <img src="/images/admin.jpg" alt="" class="img-fluid rounded-lg">
     </div>
 </template>
 

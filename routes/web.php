@@ -2,16 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any', '.*');
 
 
 //Admin: Tags
@@ -28,7 +21,23 @@ Route::post('/editCategory/{category:id}', 'AdminController@editCategory');
 Route::post('/deleteCategory/{category:id}', 'AdminController@deleteCategory');
 Route::post('/deleteAllCategories', 'AdminController@deleteAllCategories');
 
-Route::get('/{any}', function () {
-    return view('welcome');
-})->where('any', '.*');
+// Admin: albums
 
+Route::patch('/createAlbum', 'AdminController@createAlbum');
+Route::get('/getAlbums', 'AdminController@getAlbums');
+Route::patch('/editAlbum/{album:id}', 'AdminController@editAlbum');
+Route::get('/getAlbum/{album:id}', 'AdminController@getAlbum');
+
+
+
+
+
+
+
+
+
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });

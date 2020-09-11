@@ -1,5 +1,5 @@
 <template>  
-        <div class="card">
+        <div class="card bg-card">
         <div class="card-header">
             <h1 v-text="routeName"></h1>
         </div>
@@ -18,7 +18,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</th>
+                        <td>1</td>
                         <td  class="hidden-sm">Kacemi Youssouf</td>
                         <td>@octothorpe21</td>
                         <td class="hidden-md">ycef5411@gmail.com</td>
@@ -66,9 +66,7 @@
 
 
 <script>
-    import tab from '../templates/tab'
     export default {
-        components: { tab, },
         mounted (){
         console.log(this.$route.name);
         },

@@ -6,6 +6,8 @@ import welcome from './components/admin/pages/welcome'
 import users from './components/admin/pages/users'
 import tags from './components/admin/pages/tags'
 import categories from './components/admin/pages/categories'
+import galery from './components/admin/pages/galery'
+
 import sidebar from './components/admin/templates/sidebar'
 import tab from './components/admin/templates/tab'
 import navbar from './components/admin/templates/navbar'
@@ -37,6 +39,11 @@ const routes = [
         path: '/news',
         component: users,
         name: 'News'
+    },
+    {
+        path: '/galery',
+        component: galery,
+        name: 'Galery'
     },
     {
         path: '/statistics',

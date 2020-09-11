@@ -378,8 +378,8 @@ li.hamburger-list {
 }
 
 ul li.menu-item:hover {
-    background-color: rgba(254, 80, 96, 0.1) !important;
-    color: rgb(254, 80, 96);
+    background-color: rgba(58, 193, 114, 0.1) !important;
+    color: rgb(58, 193, 114);
 }
 
 .bg-card {
@@ -391,17 +391,21 @@ ul li.menu-item:hover {
     /* background: rgba(15, 23, 30, .9) !important; */
 }
 
+.vm--container {
+    z-index: 9999 !important;
+}
+
 /* .vm--modal {
     background-color: #666 !important;
     z-index: 9999;
 } */
-input::placeholder {
+input::placeholder, textarea::placeholder {
     color: #F4F4F5 !important;
 }
 
 .active {
-    background-color: rgba(254, 80, 96, 0.1) !important;
-    color: rgb(254, 80, 96);
+    background-color: rgba(58, 193, 114, 0.1) !important;
+    color: rgb(58, 193, 114);
 }
 
 .logo-side-color {

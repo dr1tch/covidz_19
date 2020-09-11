@@ -1,0 +1,14 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Image extends Model
+{
+    protected $fillable = ['album_id','description','image'];
+
+    public function album(){
+        return $this->belongsToMany(Album::class);
+    }
+}

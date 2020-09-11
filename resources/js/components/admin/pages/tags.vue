@@ -119,7 +119,7 @@
                     <form :action="`/editTag/${editable.id}`" method="POST" @submit.prevent="editTag" @keydown="form.errors.clear($event.target.name)">
                         <div class="card-body">
                             <div>
-                                <input type="text" class=" form-control bg-secondary text-light" v-model="form.tagName" :placeholder="editable.tagName">
+                                <input type="text" class=" form-control bg-secondary text-light" v-model="form.tagName" placeholder="New Tag Name..">
                                 <span class=" alert text-danger" v-if="errors" v-text="form.errors.errors.errors.tagName[0]"></span>
                             </div>
                         </div>
@@ -246,9 +246,6 @@
             errors (){
                 return Object.keys(this.form.errors.errors).length > 0;
             },
-            date(d){
-                return new Date(d);
-            },
             rows() {
                 return this.tags.length
             },
@@ -275,6 +272,7 @@
         // },
         methods: {
             showModal(name, tag){
+                this.form.tagName = tag.name;
                 let obj = {
                     id : tag.id, 
                     tagName : tag.name

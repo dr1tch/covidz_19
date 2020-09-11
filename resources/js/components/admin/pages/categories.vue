@@ -116,7 +116,7 @@
                     <form :action="`/editCategory/${editable.id}`" method="POST" @submit.prevent="editCategory" @keydown="form.errors.clear($event.target.name)">
                         <div class="card-body">
                             <div>
-                                <input type="text" class=" form-control bg-secondary text-light" v-model="form.catName" :placeholder="editable.catName">
+                                <input type="text" class=" form-control bg-secondary text-light" v-model="form.catName" placeholder="New Category Name..">
                                 <span class=" alert text-danger" v-if="errors" v-text="form.errors.errors.errors.catName[0]"></span>
                             </div>
                         </div>
@@ -262,6 +262,7 @@
        
         methods: {
             showModal(name, cat){
+                this.form.catName = cat.name;
                 let obj = {
                     id : cat.id, 
                     catName : cat.name

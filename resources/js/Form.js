@@ -112,7 +112,7 @@ class Form {
      * @param {object} data
      */
     onSuccess(data) {
-        //alert(data.message); // temporary
+        // alert(data.message + "success"); // temporary
 
         this.reset();
     }
@@ -124,6 +124,7 @@ class Form {
      * @param {object} errors
      */
     onFail(errors) {
+        // alert(data.message + "failed"); // temporary
         this.errors.record(errors);
     }
 }
